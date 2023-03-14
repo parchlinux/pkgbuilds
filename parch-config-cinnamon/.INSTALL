@@ -1,0 +1,8 @@
+post_install() {
+	mv -f etc/skel/config etc/skel/.config
+  mv -f etc/skel/local etc/skel/.local
+}
+
+post_upgrade() {
+	post_install
+}

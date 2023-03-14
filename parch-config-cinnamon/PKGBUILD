@@ -1,0 +1,19 @@
+pkgname=parch-config-cinnamon
+pkgver=1.1.0
+pkgrel=1
+pkgdesc="Parch Linux cinnamon configs"
+arch=("any")
+url="https://parchlinux.ir/"
+license=("GPL")
+conflict=("${pkgname%}")
+deps=("cinnamon")
+
+package() {
+    install -d "${pkgdir}/etc/skel/.config"
+    install -d "${pkgdir}/etc/skel/.local"
+
+    # install -dm755 "${srcdir}/etc/skel/.config/*" "${pkgdir}/etc/skel/.config"
+    # install -dm755 "${srcdir}/etc/skel/.local/*" "${pkgdir}/etc/skel/.local"
+    cp -rv ${srcdir}/etc/skel/.config/* ${pkgdir}/etc/skel/.config/
+    cp -rv ${srcdir}/etc/skel/.local/* ${pkgdir}/etc/skel/.local/
+}
