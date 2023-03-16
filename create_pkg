@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# set -x
+
+read -p "Please enter pkg name:" pkg_name
+read -p "Please enter version:" pkg_ver
+read -ep "Please enter description:" pkg_desc
+read -ep "Please enter dependences: " pkg_deps
+
+pkg_verbose="$1"
+
+if ! [[ $pkg_verbose -eq "-v" || $pkg_verbose -eq "--verbose" ]]; then
+    pkg_verbose=""
+fi
+
+mkdir -p $pkg_name $pkg_verbose
+
+pkg_file="${pkg_name}/PKGBUILD"
+
+cp .PKGBUILD.template $pkg_file $pkg_verbose
+
+sed -i -e "s/{pkg_name}/${pkg_name}/g" $pkg_file
+sed -i -e "s/{pkg_ver}/${pkg_ver}/g" $pkg_file
+sed -i -e "s/{pkg_desc}/${pkg_desc}/g" $pkg_file
+sed -i -e "s/{pkg_deps}/${pkg_deps}/g" $pkg_file

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+pkgname={pkg_name}
+pkgver={pkg_ver}
+pkgrel=1
+pkgdesc={pkg_desc}
+arch=("any")
+url="https://parchlinux.ir/"
+license=("GPL")
+conflict=("${pkgname%}")
+deps=({pkg_deps})
+
+package() {
+    install -d "${pkgdir}/etc/skel/.config"
+    install -d "${pkgdir}/etc/skel/.local"
+
+    # install -dm755 "${srcdir}/etc/skel/.config/*" "${pkgdir}/etc/skel/.config"
+    # install -dm755 "${srcdir}/etc/skel/.local/*" "${pkgdir}/etc/skel/.local"
+    cp -rv ${srcdir}/etc/skel/.config/* ${pkgdir}/etc/skel/.config/
+    cp -rv ${srcdir}/etc/skel/.local/* ${pkgdir}/etc/skel/.local/
+}

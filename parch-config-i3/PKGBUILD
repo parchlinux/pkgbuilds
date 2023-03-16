@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+pkgname=parch-config-i3
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="parch linux i3 config"
+arch=("any")
+url="https://parchlinux.ir/"
+license=("GPL")
+conflict=("${pkgname%}")
+deps=("i3" "kitty" "rofi" "dmenu" "feb" "nitrogen" "picom" "xsel" "noto-fonts" "polybar" "flameshot" "volumeicon" "ttf-icomoon-feather")
+
+package() {
+    install -d "${pkgdir}/etc/skel/.config"
+    install -d "${pkgdir}/etc/skel/.local"
+
+    cp -rv ${srcdir}/etc/skel/.config/* ${pkgdir}/etc/skel/.config/
+    cp -rv ${srcdir}/etc/skel/.local/* ${pkgdir}/etc/skel/.local/
+}
