@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///usr/share/pixmaps/parch-logo.png" added="2023-02-02T20:44:19.522169Z" modified="2023-02-02T20:44:19.522202Z" visited="2023-02-02T20:44:19.522188Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="xlet-settings.py" exec="&apos;xlet-settings.py %u&apos;" modified="2023-02-02T20:44:19.522194Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/wallpapers/parch-os-wallpapers" added="2023-02-02T20:55:45.781120Z" modified="2023-02-02T20:55:45.781128Z" visited="2023-02-02T20:55:45.781121Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="cinnamon-settings.py" exec="&apos;cinnamon-settings.py %u&apos;" modified="2023-02-02T20:55:45.781123Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/sohrab/parchconfig.zip" added="2023-02-03T08:30:58.515464Z" modified="2023-02-03T08:30:58.515479Z" visited="2023-02-03T08:30:58.515466Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="Engrampa" exec="&apos;engrampa %u&apos;" modified="2023-02-03T08:30:58.515475Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>
