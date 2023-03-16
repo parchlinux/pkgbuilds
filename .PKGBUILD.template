@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-pkgname={pkg_name}
-pkgver={pkg_ver}
+pkgname="{pkg_name}"
+pkgver="{pkg_ver}"
 pkgrel=1
-pkgdesc={pkg_desc}
+pkgdesc="{pkg_desc}"
 arch=("any")
 url="https://parchlinux.ir/"
 license=("GPL")
