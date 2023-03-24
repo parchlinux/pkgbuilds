@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+pkgname="parch-config-zsh"
+pkgver="1.0.1"
+pkgrel=1
+pkgdesc="zsh default configs"
+arch=("any")
+url="https://parchlinux.ir/"
+license=("GPL")
+conflict=("${pkgname%}")
+depends=("oh-my-zsh-git" "fzf")
+
+package() {
+    install -d "${pkgdir}/etc/skel/"
+
+    install -m755 "${srcdir}/.zshrc" "${pkgdir}/etc/skel/"
+}
