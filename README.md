@@ -1,2 +1,2 @@
 # pkgbuilds
-Parchlinux pkgbuilds
+Parch Linux PKGBUILDS

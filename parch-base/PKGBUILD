@@ -1,0 +1,11 @@
+# Maintainer: Sohrab Behdani <sohrab@parchlinux.com>
+pkgname=parch-base
+pkgver=0.1
+pkgrel=1
+pkgdesc="Meta package for a minimal Parch Installation"
+arch=(any)
+url="https://parchlinux.com"
+license=('GPL-3')
+depends=('base' 'base-devel' 'git' 'linux' 'linux-firmware'
+	'paru' 'parch-pacman' 'parch-grub' 'parch-branding' 'parch-emoji-ios'
+	)
