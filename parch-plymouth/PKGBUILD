@@ -1,0 +1,21 @@
+#Maintainer: ParchLinux
+pkgname=parch-plymouth
+destname="/usr"
+pkgver=2
+pkgrel=0
+pkgdesc="Parch Linux plymoyth support meta package"
+arch=('any')
+url="https://github.com/parchlinux"
+license=('GPL3')
+makedepends=('git')
+depends=('plymouth')
+conflicts=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+install=parch.install
+source=("git+https://github.com/parchlinux/parch-plymouth.git")
+sha256sums=('SKIP')
+package() {
+	install -dm755 ${pkgdir}${destname}
+	cp -r ${srcdir}/${pkgname}${destname}/* ${pkgdir}${destname}
+}

@@ -1,0 +1,22 @@
+#Maintainer: ParchLinux
+pkgname=parch-printer
+pkgver=1
+pkgrel=0
+pkgdesc="Parch Linux printer support meta package"
+arch=('any')
+url="https://github.com/parchlinux"
+license=('GPL3')
+makedepends=('git')
+conflicts=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+install=printer.install
+package() {
+    depends+=('cups'
+        'foomatic-db-engine'
+        'foomatic-db'
+        'foomatic-db-nonfree'
+        'foomatic-db-ppds'
+        'foomatic-db-nonfree-ppds')
+
+}

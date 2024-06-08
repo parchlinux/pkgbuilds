@@ -1,0 +1,21 @@
+# Maintainer: Parchlinux
+pkgname=parchinstall
+destname="/"
+pkgver=0
+pkgrel=2
+pkgdesc="parchlinux custom installer"
+arch=('any')
+url="https://github.com/parchlinux"
+license=('GPL3')
+makedepends=()
+depends=()
+install=parch.install
+conflicts=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+source=("git+https://github.com/parchlinux/parchinstall")
+sha256sums=('SKIP')
+package() {
+	install -dm755 ${pkgdir}${destname}
+	cp -r ${srcdir}/${pkgname}${destname}/* ${pkgdir}${destname}
+}

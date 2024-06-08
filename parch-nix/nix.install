@@ -1,0 +1,10 @@
+post_install() {
+	systemctl enable nix-daemon.service
+	systemctl start nix-daemon.service
+	echo "Run this commands after installing nix"
+	echo "sudo usermod -aG nix-users \$(whoami)"
+	echo "Reboot so that the above changes take effect then run this:"
+	echo "nix-channel --add https://nixos.org/channels/nixpkgs-unstable"
+	echo "nix-channel --update"
+	echo "Happy hacking :)"
+}

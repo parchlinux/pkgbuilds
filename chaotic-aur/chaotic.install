@@ -1,0 +1,9 @@
+pre_install() {
+	cp /etc/pacman.conf /etc/pacman.conf.back
+}
+post_install() {
+	 echo "run sudo chaotic-install to install the mirrors and keyrings."
+}
+post_remove() {
+	mv /etc/pacman.conf.back /etc/pacman.conf
+}

@@ -1,0 +1,22 @@
+#Maintainer: ParchLinux
+pkgname=blackarch-mirrors
+destname="/usr/bin"
+pkgver=1
+pkgrel=5
+pkgdesc="blackarch mirrors for parchlinux"
+arch=('any')
+url="https://github.com/parchlinux"
+license=('GPL3')
+makedepends=('git')
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+install=blackarch.install
+source=("blackarch-install")
+sha256sums=('6dad83a88319983b297d05c24120be9a3666c157d0c285f3bf5f0666cb005dff')
+package() {
+
+    depends+=('curl')
+
+	install -Dm 755 ./blackarch-install "${pkgdir}/usr/bin/blackarch-install"
+
+}

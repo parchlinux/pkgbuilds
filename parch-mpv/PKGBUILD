@@ -1,0 +1,22 @@
+#Maintainer: ParchLinux
+pkgname=parch-mpv
+destname="/etc"
+pkgver=1
+pkgrel=1
+pkgdesc="mpv config for parchlinux by Pakrohk"
+arch=('any')
+url="https://github.com/parchlinux/parch-mpv"
+license=('GPL3')
+makedepends=()
+depends=('mpv')
+conflicts=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+#install=parch.install
+source=("git+https://github.com/parchlinux/parch-mpv.git")
+sha256sums=('SKIP')
+package() {
+
+	install -dm755 ${pkgdir}${destname}
+	cp -r ${srcdir}/${pkgname}${destname}/* ${pkgdir}${destname}
+}

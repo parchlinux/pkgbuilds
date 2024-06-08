@@ -1,0 +1,30 @@
+# Maintainer: ParchLinux
+
+pkgname=parch-tweaks
+pkgver=2.0.0
+pkgrel=1
+pkgdesc="Tweak application for Parch Linux"
+arch=('x86_64')
+url="https://github.com/parchlinux/parch-tweaks"
+license=('GPL-3')
+depends=('gcc-libs')
+makedepends=('git' 'rust')
+source=("$pkgname::git+$url#branch=main")
+md5sums=('SKIP')
+
+build() {
+  cd "$srcdir/$pkgname"
+  cargo build --release
+}
+
+package() {
+  cd "$srcdir/$pkgname"
+
+  # copy license
+  install -d "${pkgdir}/usr/share/licenses/${pkgname}"
+  install -m644 "${srcdir}/${pkgname}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+
+
+  # install binary
+  install -Dm755 "target/release/$pkgname" "$pkgdir/usr/bin/$pkgname"
+}

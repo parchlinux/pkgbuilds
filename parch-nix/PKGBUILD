@@ -1,0 +1,18 @@
+#Maintainer: ParchLinux
+pkgname=parch-nix
+pkgver=1
+pkgrel=0
+pkgdesc="Parch Linux NIX support meta package"
+arch=('any')
+url="https://github.com/parchlinux"
+license=('GPL3')
+makedepends=('git')
+conflicts=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+install=nix.install
+package() {
+
+    depends+=('nix')
+
+}

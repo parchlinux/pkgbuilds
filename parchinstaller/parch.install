@@ -1,0 +1,3 @@
+post_install() {
+	ln -s /usr/share/parchinstaller/setup /usr/bin/parchinstaller
+}

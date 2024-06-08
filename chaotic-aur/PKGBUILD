@@ -1,0 +1,23 @@
+#Maintainer: ParchLinux
+pkgname=chaotic-aur
+destname="/usr/bin"
+pkgver=1
+pkgrel=0
+pkgdesc="chaotic aur for parchlinux"
+arch=('any')
+url="https://github.com/parchlinux"
+license=('GPL3')
+makedepends=('git')
+conflicts=('blackarch-mirrors')
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+install=chaotic.install
+source=("chaotic-install")
+sha256sums=('7b7f0063bd04e151995f06832198a4a005de00aca18b6b04dacad0052e370511')
+package() {
+
+    depends+=('curl')
+
+	install -Dm 755 ./chaotic-install "${pkgdir}/usr/bin/chaotic-install"
+
+}
