@@ -1,6 +1,6 @@
 # Maintainer: Sohrab Behdani <sohrab@parchlinux.com>
 pkgname=parch-gnome-meta
-pkgver=0.1
+pkgver=0.2
 pkgrel=1
 pkgdesc="Meta package for a Full Parch Gnome Installation"
 arch=(any)
@@ -9,8 +9,8 @@ license=('GPL-3')
 depends=('parch-base' 'baobab' 'evince' 'adw-gtk3-git' 'papirus-icon-theme' 'gdm'
 	'gnome-bluetooth' 'gnome-backgrounds' 'gnome-calculator' 'gnome-calendar' 'gnome-characters'
 	'gnome-disk-utility' 'gnome-color-manager' 'gnome-connections' 'gnome-control-center'
-	'gnome-tweaks' 'gnome-font-viewer' 'gnome-logs' 'g4music' 'gnome-photos' 'gnome-session' 'gnome-settings-daemon' 'gnome-shell' 'gnome-shell-extensions' 'gnome-usage' 'gnome-text-editor'
+	'gnome-tweaks' 'gnome-font-viewer' 'gnome-logs' 'g4music' 'gnome-photos' 'gnome-session' 'gnome-settings-daemon' 'gnome-shell' 'gnome-shell-extensions' 'resources' 'gnome-text-editor'
 	'loupe' 'gnome-tour' 'gnome-weather' 'gnome-power-manager' 'snapshot' 'gvfs' 'gvfs-afc' 'gvfs-goa' 'gvfs-google' 'gvfs-gphoto2' 'gvfs-mtp' 'gvfs-nfs' 'gvfs-smb'
-	'nautilus' 'rygel' 'simple-scan' 'sushi' 'celluloid' 'xdg-desktop-portal-gnome' 'xdg-user-dirs-gtk' 'yelp' 'gnome-terminal' 'parch-gdm-config'
+	'nautilus' 'rygel' 'simple-scan' 'sushi' 'celluloid' 'xdg-desktop-portal-gnome' 'xdg-user-dirs-gtk' 'yelp' 'ptyxis' 'parch-gdm-config'
 	'parch-grub' 'gnome-software-packagekit-plugin' 'gnome-software-packagekit'
 	)
