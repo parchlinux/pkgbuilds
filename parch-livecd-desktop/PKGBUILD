@@ -1,0 +1,21 @@
+#Maintainer: ParchLinux
+pkgname=parch-livecd-desktop
+destname="/etc/skel/Desktop"
+pkgver=1.0
+pkgrel=0
+pkgdesc="LiveCD desktop items for Parch Linux"
+arch=('any')
+url="https://github.com/arch-linux-gui"
+license=('GPL3')
+makedepends=('git')
+depends=()
+conflicts=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+source=(${pkgname}::"git+${url}/${pkgname}")
+sha256sums=('SKIP')
+package() {
+	install -dm755 ${pkgdir}${destname}
+	cp -r ${srcdir}/${pkgname}${destname}/* ${pkgdir}${destname}
+	#chmod 755 ${destname}/calamares.desktop
+}
